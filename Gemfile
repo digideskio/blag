@@ -13,6 +13,9 @@ gem 'sqlite3'
 gem 'sass-rails', '4.0.3'
 gem 'bootstrap-sass', '2.3.2.2'
 
+# forms
+gem 'simple_form', '3.0.2'
+
 
 group :development do
   gem 'pry-rails', '0.3.2'
