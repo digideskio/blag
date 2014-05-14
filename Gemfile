@@ -1,12 +1,32 @@
 source 'https://rubygems.org'
 
+# core
+ruby '2.1.1'
+gem 'rake', '10.3.1'
+gem 'rails', '4.1.0'
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.1'
+
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.3'
+
+# style
+gem 'sass-rails', '4.0.3'
+gem 'bootstrap-sass', '2.3.2.2'
+
+
+group :development do
+  gem 'pry-rails', '0.3.2'
+  gem 'spring'
+end
+
+group :development, :test do
+  gem 'rspec-rails', '2.14.2'
+  gem 'capybara','2.2.1'
+  gem 'selenium-webdriver', '2.41.0'
+  gem 'factory_girl_rails', '4.4.1'
+  gem 'debugger', '1.6.6'
+end
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
@@ -23,8 +43,6 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
-# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'spring',        group: :development
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
